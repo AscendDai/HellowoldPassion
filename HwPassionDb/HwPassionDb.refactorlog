@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="0e29dba1-766b-4086-ae56-bd71d16104c0" ChangeDateTime="04/21/2015 12:20:34">
+    <Property Name="ElementName" Value="[dbo].[DevRequirement].[CreateDate]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[DevRequirement]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CreateDateTime" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0dda0927-775b-45da-8660-baf89aac68fe" ChangeDateTime="04/21/2015 12:20:35">
+    <Property Name="ElementName" Value="[dbo].[DevRequirement].[StartDate]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[DevRequirement]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="StartDateTime" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="16987fcd-926f-45c8-8183-2a666adf4acb" ChangeDateTime="04/21/2015 12:20:37">
+    <Property Name="ElementName" Value="[dbo].[DevRequirement].[CompleteDate]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[DevRequirement]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CompleteDateTime" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d6a27360-ed8c-4ac7-96fb-a66e5557d4f4" ChangeDateTime="04/21/2015 12:20:49">
+    <Property Name="ElementName" Value="[dbo].[DevRequirement].[Developer]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[DevRequirement]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Developor" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="772bdad0-d8fd-47c8-a989-731e8ec84c53" ChangeDateTime="04/21/2015 12:48:38">
+    <Property Name="ElementName" Value="[dbo].[DevRequirement].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[DevRequirement]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="e10bc849-6b66-483a-a408-6ba11031f040" ChangeDateTime="04/21/2015 12:48:42">
+    <Property Name="ElementName" Value="[dbo].[RequirementReply].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[RequirementReply]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ID" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ad99fd72-6778-45bb-b023-87566e3da0ab" ChangeDateTime="04/21/2015 12:48:45">
+    <Property Name="ElementName" Value="[dbo].[RequirementReply].[DevRequirementId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[RequirementReply]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="DevRequirementID" />
+  </Operation>
+</Operations>

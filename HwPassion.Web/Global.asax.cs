@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HwPassion.Web.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,6 +17,8 @@ namespace HwPassion.Web
     {
         protected void Application_Start()
         {
+            ControllerBuilder.Current.SetControllerFactory(new NinjectControllerFactory());
+
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);

@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HwPassion.Web.Core
+namespace HwPassion.ApplicaitonService
 {
-    public class Class1
+    public interface IDevRequirementService
     {
+        IEnumerable<Model.DevRequirement> GetAll();
     }
 }
