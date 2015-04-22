@@ -7,12 +7,11 @@ using System.Threading.Tasks;
 
 namespace HwPassion.ApplicaitonService
 {
-    public class DevRequirementService : IDevRequirementService
+    public class DevRequirementService : BaseServiceImpl<DevRequirement>, IDevRequirementService
     {
-        private HwPassionDbEntities db = new HwPassionDbEntities();
-        public IEnumerable<DevRequirement> GetAll()
+        public DevRequirementService(IRepository<DevRequirement, int> repository)
+            : base(repository)
         {
-            return db.DevRequirements;
         }
     }
 }

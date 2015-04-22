@@ -1,4 +1,5 @@
 ﻿using HwPassion.ApplicaitonService;
+using HwPassion.Model;
 using Ninject;
 using System;
 using System.Collections.Generic;
@@ -27,6 +28,8 @@ namespace HwPassion.Web.Core
 
         private void AddBindings()
         {
+            kernel.Bind<IRepository<DevRequirement, int>>().To<Repository<DevRequirement>>();
+
             kernel.Bind<IDevRequirementService>().To<DevRequirementService>();
         }
     }
