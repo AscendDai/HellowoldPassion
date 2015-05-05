@@ -7,18 +7,27 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using HwPassion.Model;
+using HwPassion.ApplicaitonService;
 
 namespace HwPassion.Web.Areas.ProjectManagement.Controllers
 {
     public class DevRequirementController : Controller
     {
-        private HwPassionDbEntities db = new HwPassionDbEntities();
+        private IDevRequirementService devRequirementService;
+        public DevRequirementController(IDevRequirementService devRequirementService)
+        {
+            this.devRequirementService = devRequirementService;
+        }
 
         // GET: /ProjectManagement/DevRequirement/
+
         public ActionResult Index()
         {
-            return View(db.DevRequirements.ToList());
+            var allEntities = devRequirementService.GetAll();
+            return View(allEntities);
         }
+
+        private HwPassionDbEntities db = new HwPassionDbEntities();
 
         // GET: /ProjectManagement/DevRequirement/Details/5
         public ActionResult Details(int? id)
@@ -54,8 +63,8 @@ namespace HwPassion.Web.Areas.ProjectManagement.Controllers
                 devrequirement.CreateUser = "admin";
                 devrequirement.Status = (int)DevRequirementStatus.Initial;
 
-                db.DevRequirements.Add(devrequirement);
-                db.SaveChanges();
+                devRequirementService.Add(devrequirement);
+
                 return RedirectToAction("Index");
             }
 

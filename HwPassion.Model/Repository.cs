@@ -30,6 +30,7 @@ namespace HwPassion.Model
         public virtual void Add(TEntity entity)
         {
             DbSet.Add(entity);
+            DbContext.SaveChanges();
         }
 
         public virtual void Update(TEntity entity)
@@ -37,11 +38,13 @@ namespace HwPassion.Model
             var entry = DbContext.Entry(entity);
             DbSet.Attach(entity);
             entry.State = EntityState.Modified;
+            DbContext.SaveChanges();
         }
 
         public virtual void Delete(TEntity entity)
         {
             DbSet.Remove(entity);
+            DbContext.SaveChanges();
         }
 
         public virtual void Delete(int primaryKey)
