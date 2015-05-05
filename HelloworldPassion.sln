@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HwPassion.ApplicaitonServic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HwPassion.Infrastructure", "HwPassion.Infrastructure\HwPassion.Infrastructure.csproj", "{01EAA10A-802E-409F-9085-FB7F2916EB04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HwPassion.Util.ExeclExport", "Util.ExeclExport\HwPassion.Util.ExeclExport.csproj", "{56AF28B1-204B-4BFF-A991-B75ADE1E7E88}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HwPassion.Util.ExeclExport", "HwPassion.Util.ExeclExport\HwPassion.Util.ExeclExport.csproj", "{56AF28B1-204B-4BFF-A991-B75ADE1E7E88}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
