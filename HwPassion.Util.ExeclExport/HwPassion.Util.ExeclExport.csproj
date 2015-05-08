@@ -43,16 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conv.cs" />
     <Compile Include="Exports\ExcelExport.cs" />
     <Compile Include="Exports\ExportBase.cs" />
     <Compile Include="Exports\ExportFormat.cs" />
     <Compile Include="Exports\IExport.cs" />
     <Compile Include="Exports\IExportFactory.cs" />
-    <Compile Include="Extensions.DateTime.cs" />
-    <Compile Include="Extensions.Format.cs" />
-    <Compile Include="Extensions.Nullable.cs" />
-    <Compile Include="Extensions.Validate.cs" />
     <Compile Include="File.Path.cs" />
     <Compile Include="INullObject.cs" />
     <Compile Include="Npoi\00-Source\01-NPOI\DDF\AbstractEscherOptRecord.cs" />
@@ -1568,6 +1563,12 @@
   <ItemGroup>
     <Content Include="Npoi\00-Source\01-NPOI\Resources\functionMetadata.txt" />
     <Content Include="Npoi\00-Source\01-NPOI\说明.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HwPassion.Infrastructure\HwPassion.Infrastructure.csproj">
+      <Project>{01eaa10a-802e-409f-9085-fb7f2916eb04}</Project>
+      <Name>HwPassion.Infrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Web;
+using HwPassion.Infrastructure;
 using HwPassion.Util.ExeclExport.Offices;
 
 namespace HwPassion.Util.ExeclExport.Exports {
