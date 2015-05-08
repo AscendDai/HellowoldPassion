@@ -11,26 +11,18 @@ namespace HwPassion.Infrastructure
 
         public static T To<T>(object value, T defaultValue)
         {
-            if (value != null)
-            {
-                var targetType = typeof(T);
+            if (value == null) return defaultValue;
+            var targetType = typeof(T);
 
-                if (value.GetType() == targetType) return (T)value;
+            if (value.GetType() == targetType) return (T)value;
 
-                var converter = TypeDescriptor.GetConverter(value);
-                if (converter != null)
-                {
-                    if (converter.CanConvertTo(targetType))
-                        return (T)converter.ConvertTo(value, targetType);
-                }
+            var converter = TypeDescriptor.GetConverter(value);
+            if (converter.CanConvertTo(targetType))
+                return (T)converter.ConvertTo(value, targetType);
 
-                converter = TypeDescriptor.GetConverter(targetType);
-                if (converter != null)
-                {
-                    if (converter.CanConvertFrom(value.GetType()))
-                        return (T)converter.ConvertFrom(value);
-                }
-            }
+            converter = TypeDescriptor.GetConverter(targetType);
+            if (converter.CanConvertFrom(value.GetType()))
+                return (T)converter.ConvertFrom(value);
             return defaultValue;
         }
 
@@ -45,7 +37,7 @@ namespace HwPassion.Infrastructure
         /// 转换为整型
         /// </summary>
         /// <param name="data">数据</param>
-        public static int ToInt(object data, int defaultValue= 0)
+        public static int ToInt(object data, int defaultValue = 0)
         {
             if (data == null)
                 return defaultValue;
